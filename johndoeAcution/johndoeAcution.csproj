@@ -90,6 +90,9 @@
     <Compile Include="중분류.cs">
       <DependentUpon>johndoeModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="회원정보.cs">
+      <DependentUpon>johndoeModel.tt</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>

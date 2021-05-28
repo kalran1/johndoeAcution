@@ -9,6 +9,7 @@
         <EntityTypeShape EntityType="johndoeModel.제품_테이블" Width="1.5" PointX="0.875" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="johndoeModel.중분류" Width="1.5" PointX="4.875" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="johndoeModel.대분류" Width="1.5" PointX="7.125" PointY="0.75" />
+        <EntityTypeShape EntityType="johndoeModel.회원정보" Width="1.5" PointX="0.875" PointY="3" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

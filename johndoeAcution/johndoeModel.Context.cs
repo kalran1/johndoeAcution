@@ -29,5 +29,6 @@ namespace johndoeAcution
         public virtual DbSet<제품_테이블> 제품_테이블 { get; set; }
         public virtual DbSet<중분류> 중분류 { get; set; }
         public virtual DbSet<대분류> 대분류 { get; set; }
+        public virtual DbSet<회원정보> 회원정보 { get; set; }
     }
 }
