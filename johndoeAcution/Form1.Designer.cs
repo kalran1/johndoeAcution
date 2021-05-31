@@ -40,13 +40,9 @@ namespace johndoeAcution
             this.txtItem = new System.Windows.Forms.TextBox();
             this.btnBuy = new System.Windows.Forms.Button();
             this.gruopBox1 = new System.Windows.Forms.GroupBox();
-            this.btnLogin = new System.Windows.Forms.Button();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.txtLogin = new System.Windows.Forms.TextBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.gruopBox1.SuspendLayout();
-            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -117,7 +113,7 @@ namespace johndoeAcution
             // 
             // btnSearch
             // 
-            this.btnSearch.Location = new System.Drawing.Point(227, 23);
+            this.btnSearch.Location = new System.Drawing.Point(325, 23);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(118, 23);
             this.btnSearch.TabIndex = 1;
@@ -127,7 +123,7 @@ namespace johndoeAcution
             // 
             // txtItem
             // 
-            this.txtItem.Location = new System.Drawing.Point(6, 24);
+            this.txtItem.Location = new System.Drawing.Point(104, 24);
             this.txtItem.Name = "txtItem";
             this.txtItem.Size = new System.Drawing.Size(215, 25);
             this.txtItem.TabIndex = 2;
@@ -135,7 +131,7 @@ namespace johndoeAcution
             // 
             // btnBuy
             // 
-            this.btnBuy.Location = new System.Drawing.Point(227, 55);
+            this.btnBuy.Location = new System.Drawing.Point(325, 55);
             this.btnBuy.Name = "btnBuy";
             this.btnBuy.Size = new System.Drawing.Size(118, 23);
             this.btnBuy.TabIndex = 3;
@@ -144,47 +140,22 @@ namespace johndoeAcution
             // 
             // gruopBox1
             // 
+            this.gruopBox1.Controls.Add(this.comboBox1);
             this.gruopBox1.Controls.Add(this.txtItem);
             this.gruopBox1.Controls.Add(this.btnBuy);
             this.gruopBox1.Controls.Add(this.btnSearch);
-            this.gruopBox1.Location = new System.Drawing.Point(321, 12);
+            this.gruopBox1.Location = new System.Drawing.Point(111, 12);
             this.gruopBox1.Name = "gruopBox1";
-            this.gruopBox1.Size = new System.Drawing.Size(370, 100);
+            this.gruopBox1.Size = new System.Drawing.Size(580, 100);
             this.gruopBox1.TabIndex = 4;
             this.gruopBox1.TabStop = false;
             this.gruopBox1.Text = "물건 정보 검색 및 구매";
-            // 
-            // btnLogin
-            // 
-            this.btnLogin.Location = new System.Drawing.Point(178, 26);
-            this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(109, 23);
-            this.btnLogin.TabIndex = 5;
-            this.btnLogin.Text = "로그인";
-            this.btnLogin.UseVisualStyleBackColor = true;
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.txtLogin);
-            this.groupBox1.Controls.Add(this.btnLogin);
-            this.groupBox1.Location = new System.Drawing.Point(12, 12);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(303, 100);
-            this.groupBox1.TabIndex = 6;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "회원 정보";
-            // 
-            // txtLogin
-            // 
-            this.txtLogin.Location = new System.Drawing.Point(6, 24);
-            this.txtLogin.Name = "txtLogin";
-            this.txtLogin.Size = new System.Drawing.Size(166, 25);
-            this.txtLogin.TabIndex = 6;
+           
             // 
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(715, 67);
+            this.comboBox1.Location = new System.Drawing.Point(-23, 26);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(121, 23);
             this.comboBox1.TabIndex = 7;
@@ -194,8 +165,6 @@ namespace johndoeAcution
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(870, 480);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.gruopBox1);
             this.Controls.Add(this.dataGridView1);
             this.Name = "Form1";
@@ -204,8 +173,6 @@ namespace johndoeAcution
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.gruopBox1.ResumeLayout(false);
             this.gruopBox1.PerformLayout();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -223,9 +190,6 @@ namespace johndoeAcution
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
-        private System.Windows.Forms.Button btnLogin;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox txtLogin;
         private System.Windows.Forms.ComboBox comboBox1;
     }
 }
