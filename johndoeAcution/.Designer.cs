@@ -91,6 +91,7 @@ namespace johndoeAcution
             this.txtPwd.Size = new System.Drawing.Size(166, 25);
             this.txtPwd.TabIndex = 7;
             this.txtPwd.TextChanged += new System.EventHandler(this.txtPwd_TextChanged);
+            this.txtPwd.Enter += new System.EventHandler(this.btnLogin_Click);
             // 
             // txtLogin
             // 
@@ -111,7 +112,7 @@ namespace johndoeAcution
             this.btnLogin.UseVisualStyleBackColor = true;
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
-            // Form2
+            // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -119,7 +120,7 @@ namespace johndoeAcution
             this.Controls.Add(this.groupBox1);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "Form2";
+            this.Name = "Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "로그인 화면";
             this.groupBox1.ResumeLayout(false);

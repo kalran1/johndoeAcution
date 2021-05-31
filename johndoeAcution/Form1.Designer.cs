@@ -128,6 +128,7 @@ namespace johndoeAcution
             this.txtItem.Size = new System.Drawing.Size(215, 25);
             this.txtItem.TabIndex = 1;
             this.txtItem.TextChanged += new System.EventHandler(this.txtItem_TextChanged);
+            this.txtItem.Enter += new System.EventHandler(this.btnSearch_Click);
             // 
             // btnBuy
             // 
@@ -135,7 +136,7 @@ namespace johndoeAcution
             this.btnBuy.Name = "btnBuy";
             this.btnBuy.Size = new System.Drawing.Size(118, 31);
             this.btnBuy.TabIndex = 3;
-            this.btnBuy.Text = "구매";
+            this.btnBuy.Text = "구매/반품";
             this.btnBuy.UseVisualStyleBackColor = true;
             this.btnBuy.Click += new System.EventHandler(this.btnBuy_Click);
             // 
@@ -173,6 +174,7 @@ namespace johndoeAcution
             this.Controls.Add(this.dataGridView1);
             this.Name = "Form1";
             this.Text = "존도마켓";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form1_FormClosed);
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.gruopBox1.ResumeLayout(false);

@@ -36,16 +36,22 @@ namespace johndoeAcution
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            if (LoginId == "abcd" && Password == "1234")
+            using (var db = new johndoeDb()) // 유징블록을 지나가면 바로 제거하기위함   
             {
-                var form = new Form1();
-                form.Show();
-                Hide();
-            }
-            else
-            {
-                MessageBox.Show("Login failed.");
-                Hide();
+                var emp = db.회원정보.SingleOrDefault(p => p.userId == txtLogin.Text &&
+                                                        p.password == txtPwd.Text);
+
+
+                if (emp != null)
+                {
+                    var form = new Form1();
+                    form.Show();
+                    this.Hide(); // 로그인창 감춤 
+                }
+                else
+                {
+                    MessageBox.Show(" 아이디나 비밀번호가 잘못되었습니다.", "로그인 실패");
+                }
             }
         }
     }
