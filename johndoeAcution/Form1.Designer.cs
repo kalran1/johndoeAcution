@@ -30,19 +30,43 @@ namespace johndoeAcution
         private void InitializeComponent()
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.btnSearch = new System.Windows.Forms.Button();
+            this.txtItem = new System.Windows.Forms.TextBox();
+            this.btnBuy = new System.Windows.Forms.Button();
+            this.gruopBox1 = new System.Windows.Forms.GroupBox();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnSearch = new System.Windows.Forms.Button();
-            this.txtItem = new System.Windows.Forms.TextBox();
-            this.btnBuy = new System.Windows.Forms.Button();
-            this.gruopBox1 = new System.Windows.Forms.GroupBox();
+            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridView3 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.gruopBox1.SuspendLayout();
+            this.tabControl1.SuspendLayout();
+            this.tabPage1.SuspendLayout();
+            this.tabPage2.SuspendLayout();
+            this.tabPage3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -55,11 +79,11 @@ namespace johndoeAcution
             this.Column4,
             this.Column5,
             this.Column6});
-            this.dataGridView1.Location = new System.Drawing.Point(12, 141);
+            this.dataGridView1.Location = new System.Drawing.Point(6, 16);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 27;
-            this.dataGridView1.Size = new System.Drawing.Size(728, 383);
+            this.dataGridView1.Size = new System.Drawing.Size(802, 349);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -69,7 +93,7 @@ namespace johndoeAcution
             this.Column1.HeaderText = "ID";
             this.Column1.MinimumWidth = 6;
             this.Column1.Name = "Column1";
-            this.Column1.Width = 50;
+            this.Column1.Width = 125;
             // 
             // Column2
             // 
@@ -98,14 +122,14 @@ namespace johndoeAcution
             // Column5
             // 
             this.Column5.DataPropertyName = "smallId";
-            this.Column5.HeaderText = "소분류";
+            this.Column5.HeaderText = "소분류코드";
             this.Column5.MinimumWidth = 6;
             this.Column5.Name = "Column5";
             this.Column5.Width = 125;
             // 
             // Column6
             // 
-            this.Column6.DataPropertyName = "buy";
+            this.Column6.DataPropertyName = "Buy";
             this.Column6.HeaderText = "구매 여부";
             this.Column6.MinimumWidth = 6;
             this.Column6.Name = "Column6";
@@ -113,7 +137,7 @@ namespace johndoeAcution
             // 
             // btnSearch
             // 
-            this.btnSearch.Location = new System.Drawing.Point(345, 29);
+            this.btnSearch.Location = new System.Drawing.Point(354, 27);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(127, 32);
             this.btnSearch.TabIndex = 1;
@@ -123,7 +147,7 @@ namespace johndoeAcution
             // 
             // txtItem
             // 
-            this.txtItem.Location = new System.Drawing.Point(124, 29);
+            this.txtItem.Location = new System.Drawing.Point(133, 27);
             this.txtItem.Name = "txtItem";
             this.txtItem.Size = new System.Drawing.Size(215, 30);
             this.txtItem.TabIndex = 2;
@@ -131,7 +155,7 @@ namespace johndoeAcution
             // 
             // btnBuy
             // 
-            this.btnBuy.Location = new System.Drawing.Point(345, 71);
+            this.btnBuy.Location = new System.Drawing.Point(354, 69);
             this.btnBuy.Name = "btnBuy";
             this.btnBuy.Size = new System.Drawing.Size(127, 35);
             this.btnBuy.TabIndex = 3;
@@ -147,32 +171,68 @@ namespace johndoeAcution
             this.gruopBox1.Font = new System.Drawing.Font("굴림", 12F);
             this.gruopBox1.Location = new System.Drawing.Point(12, 12);
             this.gruopBox1.Name = "gruopBox1";
-            this.gruopBox1.Size = new System.Drawing.Size(487, 123);
+            this.gruopBox1.Size = new System.Drawing.Size(532, 123);
             this.gruopBox1.TabIndex = 4;
             this.gruopBox1.TabStop = false;
             this.gruopBox1.Text = "물건 정보 검색 및 구매";
             // 
             // comboBox1
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(0, 29);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 28);
-            this.comboBox1.TabIndex = 4;
+            // Column2
+            // 
+            this.Column2.DataPropertyName = "name";
+            this.Column2.HeaderText = "이름";
+            this.Column2.MinimumWidth = 6;
+            this.Column2.Name = "Column2";
+            this.Column2.Width = 125;
+            // 
+            // Column3
+            // 
+            this.Column3.DataPropertyName = "brand";
+            this.Column3.HeaderText = "제조사";
+            this.Column3.MinimumWidth = 6;
+            this.Column3.Name = "Column3";
+            // 
+            // Column4
+            // 
+            this.Column4.DataPropertyName = "price";
+            this.Column4.HeaderText = "가격";
+            this.Column4.MinimumWidth = 6;
+            this.Column4.Name = "Column4";
+            // 
+            // Column5
+            // 
+            this.Column5.DataPropertyName = "smallId";
+            this.Column5.HeaderText = "소분류";
+            this.Column5.MinimumWidth = 6;
+            this.Column5.Name = "Column5";
+            // 
+            // Column6
+            // 
+            this.Column6.DataPropertyName = "buy";
+            this.Column6.HeaderText = "구매 여부";
+            this.Column6.MinimumWidth = 6;
+            this.Column6.Name = "Column6";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(752, 532);
+            this.ClientSize = new System.Drawing.Size(838, 549);
+            this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.gruopBox1);
-            this.Controls.Add(this.dataGridView1);
             this.Name = "Form1";
             this.Text = "존도마켓";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.gruopBox1.ResumeLayout(false);
             this.gruopBox1.PerformLayout();
+            this.tabControl1.ResumeLayout(false);
+            this.tabPage1.ResumeLayout(false);
+            this.tabPage2.ResumeLayout(false);
+            this.tabPage3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -190,7 +250,25 @@ namespace johndoeAcution
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
+        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
+        private System.Windows.Forms.DataGridView dataGridView3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn12;
     }
 }
 
