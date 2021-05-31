@@ -30,17 +30,20 @@ namespace johndoeAcution
 
         private void RefreshGrid()
         {
-            using (var db = new johndoeDb())
-            {
-                var itemlist = db.제품_테이블.ToList();
-
-                dataGridView1.DataSource= itemlist;
-            }
+            johndoeDb db = new johndoeDb();
+            dataGridView1.DataSource = db.제품_테이블.ToList();
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
            RefreshGrid();
+        }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            SearchTable searchTable = new SearchTable(txtItem.Text);
+            dataGridView1.DataSource = searchTable.SearchByName();
+
         }
     }
 }
