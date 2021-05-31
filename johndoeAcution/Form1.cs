@@ -24,8 +24,8 @@ namespace johndoeAcution
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            
-            
+
+
         }
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -39,6 +39,6 @@ namespace johndoeAcution
             dataGridView1.DataSource = searchTable.SearchByName();
         }
 
-        
+
     }
 }
