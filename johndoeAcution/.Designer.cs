@@ -1,7 +1,7 @@
 ﻿
 namespace johndoeAcution
 {
-    partial class Form2
+    partial class Login
     {
         /// <summary>
         /// Required designer variable.
@@ -32,7 +32,7 @@ namespace johndoeAcution
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnClose = new System.Windows.Forms.Button();
             this.txtPwd = new System.Windows.Forms.TextBox();
             this.txtLogin = new System.Windows.Forms.TextBox();
             this.btnLogin = new System.Windows.Forms.Button();
@@ -43,7 +43,7 @@ namespace johndoeAcution
             // 
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.button1);
+            this.groupBox1.Controls.Add(this.btnClose);
             this.groupBox1.Controls.Add(this.txtPwd);
             this.groupBox1.Controls.Add(this.txtLogin);
             this.groupBox1.Controls.Add(this.btnLogin);
@@ -57,7 +57,7 @@ namespace johndoeAcution
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(44, 77);
+            this.label2.Location = new System.Drawing.Point(41, 87);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(76, 15);
             this.label2.TabIndex = 10;
@@ -66,40 +66,46 @@ namespace johndoeAcution
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(74, 39);
+            this.label1.Location = new System.Drawing.Point(96, 44);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(20, 15);
             this.label1.TabIndex = 9;
             this.label1.Text = "ID";
             // 
-            // button1
+            // btnClose
             // 
-            this.button1.Location = new System.Drawing.Point(184, 144);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(109, 23);
-            this.button1.TabIndex = 8;
-            this.button1.Text = "닫기";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnClose.Location = new System.Drawing.Point(186, 135);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(111, 34);
+            this.btnClose.TabIndex = 8;
+            this.btnClose.Text = "닫기";
+            this.btnClose.UseVisualStyleBackColor = true;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // txtPwd
             // 
-            this.txtPwd.Location = new System.Drawing.Point(152, 74);
+            this.txtPwd.Location = new System.Drawing.Point(149, 84);
+            this.txtPwd.MaxLength = 15;
             this.txtPwd.Name = "txtPwd";
+            this.txtPwd.PasswordChar = '*';
             this.txtPwd.Size = new System.Drawing.Size(166, 25);
             this.txtPwd.TabIndex = 7;
+            this.txtPwd.TextChanged += new System.EventHandler(this.txtPwd_TextChanged);
             // 
             // txtLogin
             // 
-            this.txtLogin.Location = new System.Drawing.Point(152, 29);
+            this.txtLogin.Location = new System.Drawing.Point(149, 39);
+            this.txtLogin.MaxLength = 15;
             this.txtLogin.Name = "txtLogin";
             this.txtLogin.Size = new System.Drawing.Size(166, 25);
             this.txtLogin.TabIndex = 6;
+            this.txtLogin.TextChanged += new System.EventHandler(this.txtLogin_TextChanged);
             // 
             // btnLogin
             // 
-            this.btnLogin.Location = new System.Drawing.Point(47, 144);
+            this.btnLogin.Location = new System.Drawing.Point(49, 135);
             this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(109, 23);
+            this.btnLogin.Size = new System.Drawing.Size(116, 34);
             this.btnLogin.TabIndex = 5;
             this.btnLogin.Text = "로그인";
             this.btnLogin.UseVisualStyleBackColor = true;
@@ -111,7 +117,10 @@ namespace johndoeAcution
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(388, 233);
             this.Controls.Add(this.groupBox1);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Form2";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "로그인 화면";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -126,7 +135,7 @@ namespace johndoeAcution
         private System.Windows.Forms.Button btnLogin;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.TextBox txtPwd;
     }
 }
