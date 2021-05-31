@@ -19,5 +19,6 @@ namespace johndoeAcution
         public string brand { get; set; }
         public int price { get; set; }
         public int smallId { get; set; }
+        public Nullable<bool> buy { get; set; }
     }
 }
