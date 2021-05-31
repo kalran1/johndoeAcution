@@ -82,7 +82,7 @@
           <Property Name="brand" Type="nvarchar" MaxLength="20" Nullable="false" />
           <Property Name="price" Type="int" Nullable="false" />
           <Property Name="smallId" Type="int" Nullable="false" />
-          <Property Name="buy" Type="bit" />
+          <Property Name="buy" Type="bit" Nullable="false" />
         </EntityType>
         <EntityType Name="중분류">
           <Key>
@@ -166,6 +166,7 @@
           <Property Name="brand" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="price" Type="Int32" Nullable="false" />
           <Property Name="smallId" Type="Int32" Nullable="false" />
+          <Property Name="buy" Type="Boolean" Nullable="false" />
         </EntityType>
         <EntityType Name="중분류">
           <Key>
@@ -310,6 +311,7 @@
           <EntitySetMapping Name="제품_테이블">
             <EntityTypeMapping TypeName="johndoeModel.제품_테이블">
               <MappingFragment StoreEntitySet="제품_테이블">
+                <ScalarProperty Name="buy" ColumnName="buy" />
                 <ScalarProperty Name="id" ColumnName="id" />
                 <ScalarProperty Name="name" ColumnName="name" />
                 <ScalarProperty Name="brand" ColumnName="brand" />
