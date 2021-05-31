@@ -99,6 +99,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PurchaseItem.cs" />
     <Compile Include="SearchTable.cs" />
     <Compile Include="대분류.cs">
       <DependentUpon>johndoeModel.tt</DependentUpon>
