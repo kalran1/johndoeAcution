@@ -60,5 +60,10 @@ namespace johndoeAcution
             SearchTable searchTable = new SearchTable(txtItem.Text);
             dataGridView1.DataSource = searchTable.SearchByName();
         }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

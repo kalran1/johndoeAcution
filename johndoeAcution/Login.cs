@@ -10,11 +10,11 @@ using System.Windows.Forms;
 
 namespace johndoeAcution
 {
-    public partial class Form2 : Form
+    public partial class Login : Form
     {
         protected string LoginId;
         protected string Password;
-        public Form2()
+        public Login()
         {
             InitializeComponent();
         }
@@ -36,7 +36,7 @@ namespace johndoeAcution
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            if (LoginId == "abcd" || Password == "1234")
+            if (LoginId == "abcd" && Password == "1234")
             {
                 var form = new Form1();
                 form.Show();
