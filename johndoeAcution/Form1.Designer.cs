@@ -43,6 +43,7 @@ namespace johndoeAcution
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.gruopBox1.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -165,6 +166,7 @@ namespace johndoeAcution
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(870, 480);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.gruopBox1);
             this.Controls.Add(this.dataGridView1);
             this.Name = "Form1";
@@ -173,6 +175,8 @@ namespace johndoeAcution
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.gruopBox1.ResumeLayout(false);
             this.gruopBox1.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
 
         }
