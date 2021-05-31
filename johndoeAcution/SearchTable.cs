@@ -6,22 +6,26 @@ using System.Threading.Tasks;
 
 namespace johndoeAcution
 {
+
     class SearchTable
     {
         string keyword;
         readonly johndoeDb db = new johndoeDb();
-
         public SearchTable(string kw)
         {
             keyword = kw;    
         }
 
-        public List<제품_테이블> SearchByName()
+        public List<CustomStructure.DataGridViewSt> SearchByName()
         {
             using(johndoeDb db = new johndoeDb())
             {
-                string qs = "SELECT name, brand, price, smallName, buy FROM 제품_테이블, 소분류 WHERE smallId = 소분류.id";
-                return db.제품_테이블.SqlQuery(qs).ToList();
+                string qs = 
+                    $"SELECT 제품_테이블.id, name, brand, price, smallName, buy " +
+                    $"FROM 제품_테이블 JOIN 소분류 ON 소분류.id = smallId " +
+                    $"WHERE name like N'%{keyword}%'";
+
+                return db.Database.SqlQuery<CustomStructure.DataGridViewSt>(qs).ToList();
             }
         }
     }

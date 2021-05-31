@@ -12,13 +12,12 @@ namespace johndoeAcution
     using System;
     using System.Collections.Generic;
     
-    public partial class 제품_테이블
+    public partial class Certificate
     {
-        public int id { get; set; }
-        public string name { get; set; }
-        public string brand { get; set; }
-        public int price { get; set; }
-        public int smallId { get; set; }
-        public bool buy { get; set; }
+        public int Id { get; set; }
+        public int EmpId { get; set; }
+        public string CertificateName { get; set; }
+    
+        public virtual Emp Emp { get; set; }
     }
 }

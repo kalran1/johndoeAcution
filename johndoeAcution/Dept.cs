@@ -12,13 +12,19 @@ namespace johndoeAcution
     using System;
     using System.Collections.Generic;
     
-    public partial class 제품_테이블
+    public partial class Dept
     {
-        public int id { get; set; }
-        public string name { get; set; }
-        public string brand { get; set; }
-        public int price { get; set; }
-        public int smallId { get; set; }
-        public bool buy { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public Dept()
+        {
+            this.Emps = new HashSet<Emp>();
+        }
+    
+        public int Id { get; set; }
+        public string DeptName { get; set; }
+        public int LocId { get; set; }
+    
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Emp> Emps { get; set; }
     }
 }
