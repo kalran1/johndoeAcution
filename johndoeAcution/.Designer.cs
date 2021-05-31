@@ -90,7 +90,6 @@ namespace johndoeAcution
             this.txtPwd.PasswordChar = '*';
             this.txtPwd.Size = new System.Drawing.Size(166, 25);
             this.txtPwd.TabIndex = 7;
-            this.txtPwd.TextChanged += new System.EventHandler(this.txtPwd_TextChanged);
             // 
             // txtLogin
             // 
@@ -99,7 +98,6 @@ namespace johndoeAcution
             this.txtLogin.Name = "txtLogin";
             this.txtLogin.Size = new System.Drawing.Size(166, 25);
             this.txtLogin.TabIndex = 6;
-            this.txtLogin.TextChanged += new System.EventHandler(this.txtLogin_TextChanged);
             // 
             // btnLogin
             // 

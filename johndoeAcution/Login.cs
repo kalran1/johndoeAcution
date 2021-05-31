@@ -12,8 +12,7 @@ namespace johndoeAcution
 {
     public partial class Login : Form
     {
-        protected string LoginId;
-        protected string Password;
+        
         public Login()
         {
             InitializeComponent();
@@ -24,15 +23,7 @@ namespace johndoeAcution
             Close();
         }
 
-        private void txtLogin_TextChanged(object sender, EventArgs e)
-        {
-            LoginId = txtLogin.Text;
-        }
 
-        private void txtPwd_TextChanged(object sender, EventArgs e)
-        {
-            Password = txtPwd.Text;
-        }
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
@@ -40,7 +31,6 @@ namespace johndoeAcution
             {
                 var emp = db.회원정보.SingleOrDefault(p => p.userId == txtLogin.Text &&
                                                         p.password == txtPwd.Text);
-
 
                 if (emp != null)
                 {
