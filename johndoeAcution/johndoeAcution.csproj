@@ -55,16 +55,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Certificate.cs">
-      <DependentUpon>johndoeModel.tt</DependentUpon>
-    </Compile>
     <Compile Include="customStructure.cs" />
-    <Compile Include="Dept.cs">
-      <DependentUpon>johndoeModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Emp.cs">
-      <DependentUpon>johndoeModel.tt</DependentUpon>
-    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -77,12 +68,6 @@
     <Compile Include=".Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
       <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="iot.cs">
-      <DependentUpon>johndoeModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="iot_log.cs">
-      <DependentUpon>johndoeModel.tt</DependentUpon>
     </Compile>
     <Compile Include="johndoeModel.Context.cs">
       <AutoGen>True</AutoGen>

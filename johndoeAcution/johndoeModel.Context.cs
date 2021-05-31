@@ -30,10 +30,5 @@ namespace johndoeAcution
         public virtual DbSet<중분류> 중분류 { get; set; }
         public virtual DbSet<대분류> 대분류 { get; set; }
         public virtual DbSet<회원정보> 회원정보 { get; set; }
-        public virtual DbSet<Certificate> Certificates { get; set; }
-        public virtual DbSet<Dept> Depts { get; set; }
-        public virtual DbSet<Emp> Emps { get; set; }
-        public virtual DbSet<iot> iots { get; set; }
-        public virtual DbSet<iot_log> iot_log { get; set; }
     }
 }
