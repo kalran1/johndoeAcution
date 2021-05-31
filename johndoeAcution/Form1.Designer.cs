@@ -113,7 +113,7 @@ namespace johndoeAcution
             // 
             // btnSearch
             // 
-            this.btnSearch.Location = new System.Drawing.Point(325, 23);
+            this.btnSearch.Location = new System.Drawing.Point(377, 21);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(118, 23);
             this.btnSearch.TabIndex = 1;
@@ -123,7 +123,7 @@ namespace johndoeAcution
             // 
             // txtItem
             // 
-            this.txtItem.Location = new System.Drawing.Point(104, 24);
+            this.txtItem.Location = new System.Drawing.Point(156, 22);
             this.txtItem.Name = "txtItem";
             this.txtItem.Size = new System.Drawing.Size(215, 25);
             this.txtItem.TabIndex = 2;
@@ -131,7 +131,7 @@ namespace johndoeAcution
             // 
             // btnBuy
             // 
-            this.btnBuy.Location = new System.Drawing.Point(325, 55);
+            this.btnBuy.Location = new System.Drawing.Point(377, 53);
             this.btnBuy.Name = "btnBuy";
             this.btnBuy.Size = new System.Drawing.Size(118, 23);
             this.btnBuy.TabIndex = 3;
@@ -144,18 +144,17 @@ namespace johndoeAcution
             this.gruopBox1.Controls.Add(this.txtItem);
             this.gruopBox1.Controls.Add(this.btnBuy);
             this.gruopBox1.Controls.Add(this.btnSearch);
-            this.gruopBox1.Location = new System.Drawing.Point(111, 12);
+            this.gruopBox1.Location = new System.Drawing.Point(12, 12);
             this.gruopBox1.Name = "gruopBox1";
             this.gruopBox1.Size = new System.Drawing.Size(580, 100);
             this.gruopBox1.TabIndex = 4;
             this.gruopBox1.TabStop = false;
             this.gruopBox1.Text = "물건 정보 검색 및 구매";
-
             // 
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(-23, 26);
+            this.comboBox1.Location = new System.Drawing.Point(29, 24);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(121, 23);
             this.comboBox1.TabIndex = 7;
