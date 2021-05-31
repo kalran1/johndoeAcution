@@ -5,59 +5,6 @@
     <!-- SSDL content -->
     <edmx:StorageModels>
     <Schema Namespace="johndoeModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012.Azure" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
-        <EntityType Name="Certificate">
-          <Key>
-            <PropertyRef Name="Id" />
-          </Key>
-          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="EmpId" Type="int" Nullable="false" />
-          <Property Name="CertificateName" Type="nvarchar" MaxLength="30" Nullable="false" />
-        </EntityType>
-        <EntityType Name="Dept">
-          <Key>
-            <PropertyRef Name="Id" />
-          </Key>
-          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="DeptName" Type="nvarchar" MaxLength="20" Nullable="false" />
-          <Property Name="LocId" Type="int" Nullable="false" />
-        </EntityType>
-        <EntityType Name="Emp">
-          <Key>
-            <PropertyRef Name="Id" />
-          </Key>
-          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="EmpNo" Type="nvarchar" MaxLength="6" Nullable="false" />
-          <Property Name="Password" Type="varchar" MaxLength="20" Nullable="false" />
-          <Property Name="Name" Type="nvarchar" MaxLength="20" Nullable="false" />
-          <Property Name="Title" Type="nvarchar" MaxLength="10" Nullable="false" />
-          <Property Name="HireDate" Type="datetime" Nullable="false" />
-          <Property Name="Salary" Type="int" Nullable="false" />
-          <Property Name="Bonus" Type="int" />
-          <Property Name="ManagerId" Type="int" />
-          <Property Name="DeptId" Type="int" />
-        </EntityType>
-        <EntityType Name="iot">
-          <Key>
-            <PropertyRef Name="id" />
-          </Key>
-          <Property Name="id" Type="int" Nullable="false" />
-          <Property Name="DeviceId" Type="int" Nullable="false" />
-          <Property Name="Temperature" Type="int" />
-          <Property Name="Humidity" Type="int" />
-          <Property Name="power" Type="bit" />
-          <Property Name="UpdateDate" Type="datetime" />
-        </EntityType>
-        <EntityType Name="iot_log">
-          <Key>
-            <PropertyRef Name="id" />
-          </Key>
-          <Property Name="id" Type="int" Nullable="false" />
-          <Property Name="DeviceId" Type="int" Nullable="false" />
-          <Property Name="Temperature" Type="int" Nullable="false" />
-          <Property Name="Humidity" Type="int" Nullable="false" />
-          <Property Name="power" Type="bit" Nullable="false" />
-          <Property Name="logDate" Type="datetime" />
-        </EntityType>
         <EntityType Name="대분류">
           <Key>
             <PropertyRef Name="id" />
@@ -101,49 +48,12 @@
           <Property Name="password" Type="nvarchar" MaxLength="20" Nullable="false" />
           <Property Name="userName" Type="nvarchar" MaxLength="20" />
         </EntityType>
-        <Association Name="FK_Dept_Member">
-          <End Role="Dept" Type="Self.Dept" Multiplicity="0..1" />
-          <End Role="Emp" Type="Self.Emp" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Dept">
-              <PropertyRef Name="Id" />
-            </Principal>
-            <Dependent Role="Emp">
-              <PropertyRef Name="DeptId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_Emp_Certificate">
-          <End Role="Emp" Type="Self.Emp" Multiplicity="1" />
-          <End Role="Certificate" Type="Self.Certificate" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Emp">
-              <PropertyRef Name="Id" />
-            </Principal>
-            <Dependent Role="Certificate">
-              <PropertyRef Name="EmpId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <EntityContainer Name="johndoeModelStoreContainer">
-          <EntitySet Name="Certificate" EntityType="Self.Certificate" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="Dept" EntityType="Self.Dept" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="Emp" EntityType="Self.Emp" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="iot" EntityType="Self.iot" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="iot_log" EntityType="Self.iot_log" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="대분류" EntityType="Self.대분류" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="소분류" EntityType="Self.소분류" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="제품_테이블" EntityType="Self.제품_테이블" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="중분류" EntityType="Self.중분류" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="회원정보" EntityType="Self.회원정보" Schema="dbo" store:Type="Tables" />
-          <AssociationSet Name="FK_Dept_Member" Association="Self.FK_Dept_Member">
-            <End Role="Dept" EntitySet="Dept" />
-            <End Role="Emp" EntitySet="Emp" />
-          </AssociationSet>
-          <AssociationSet Name="FK_Emp_Certificate" Association="Self.FK_Emp_Certificate">
-            <End Role="Emp" EntitySet="Emp" />
-            <End Role="Certificate" EntitySet="Certificate" />
-          </AssociationSet>
         </EntityContainer>
       </Schema></edmx:StorageModels>
     <!-- CSDL content -->
@@ -182,19 +92,6 @@
           <EntitySet Name="중분류" EntityType="Self.중분류" />
           <EntitySet Name="대분류" EntityType="johndoeModel.대분류" />
           <EntitySet Name="회원정보" EntityType="johndoeModel.회원정보" />
-          <EntitySet Name="Certificates" EntityType="johndoeModel.Certificate" />
-          <EntitySet Name="Depts" EntityType="johndoeModel.Dept" />
-          <EntitySet Name="Emps" EntityType="johndoeModel.Emp" />
-          <EntitySet Name="iots" EntityType="johndoeModel.iot" />
-          <EntitySet Name="iot_log" EntityType="johndoeModel.iot_log" />
-          <AssociationSet Name="FK_Emp_Certificate" Association="johndoeModel.FK_Emp_Certificate">
-            <End Role="Emp" EntitySet="Emps" />
-            <End Role="Certificate" EntitySet="Certificates" />
-          </AssociationSet>
-          <AssociationSet Name="FK_Dept_Member" Association="johndoeModel.FK_Dept_Member">
-            <End Role="Dept" EntitySet="Depts" />
-            <End Role="Emp" EntitySet="Emps" />
-          </AssociationSet>
           </EntityContainer>
         <EntityType Name="대분류">
           <Key>
@@ -212,87 +109,6 @@
           <Property Name="password" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
           <Property Name="userName" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
         </EntityType>
-        <EntityType Name="Certificate">
-          <Key>
-            <PropertyRef Name="Id" />
-          </Key>
-          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="EmpId" Type="Int32" Nullable="false" />
-          <Property Name="CertificateName" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="true" />
-          <NavigationProperty Name="Emp" Relationship="johndoeModel.FK_Emp_Certificate" FromRole="Certificate" ToRole="Emp" />
-        </EntityType>
-        <EntityType Name="Dept">
-          <Key>
-            <PropertyRef Name="Id" />
-          </Key>
-          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="DeptName" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
-          <Property Name="LocId" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="Emps" Relationship="johndoeModel.FK_Dept_Member" FromRole="Dept" ToRole="Emp" />
-        </EntityType>
-        <EntityType Name="Emp">
-          <Key>
-            <PropertyRef Name="Id" />
-          </Key>
-          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="EmpNo" Type="String" Nullable="false" MaxLength="6" FixedLength="false" Unicode="true" />
-          <Property Name="Password" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
-          <Property Name="Name" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
-          <Property Name="Title" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
-          <Property Name="HireDate" Type="DateTime" Nullable="false" Precision="3" />
-          <Property Name="Salary" Type="Int32" Nullable="false" />
-          <Property Name="Bonus" Type="Int32" />
-          <Property Name="ManagerId" Type="Int32" />
-          <Property Name="DeptId" Type="Int32" />
-          <NavigationProperty Name="Certificates" Relationship="johndoeModel.FK_Emp_Certificate" FromRole="Emp" ToRole="Certificate" />
-          <NavigationProperty Name="Dept" Relationship="johndoeModel.FK_Dept_Member" FromRole="Emp" ToRole="Dept" />
-        </EntityType>
-        <EntityType Name="iot">
-          <Key>
-            <PropertyRef Name="id" />
-          </Key>
-          <Property Name="id" Type="Int32" Nullable="false" />
-          <Property Name="DeviceId" Type="Int32" Nullable="false" />
-          <Property Name="Temperature" Type="Int32" />
-          <Property Name="Humidity" Type="Int32" />
-          <Property Name="power" Type="Boolean" />
-          <Property Name="UpdateDate" Type="DateTime" Precision="3" />
-        </EntityType>
-        <EntityType Name="iot_log">
-          <Key>
-            <PropertyRef Name="id" />
-          </Key>
-          <Property Name="id" Type="Int32" Nullable="false" />
-          <Property Name="DeviceId" Type="Int32" Nullable="false" />
-          <Property Name="Temperature" Type="Int32" Nullable="false" />
-          <Property Name="Humidity" Type="Int32" Nullable="false" />
-          <Property Name="power" Type="Boolean" Nullable="false" />
-          <Property Name="logDate" Type="DateTime" Precision="3" />
-        </EntityType>
-        <Association Name="FK_Emp_Certificate">
-          <End Type="johndoeModel.Emp" Role="Emp" Multiplicity="1" />
-          <End Type="johndoeModel.Certificate" Role="Certificate" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Emp">
-              <PropertyRef Name="Id" />
-            </Principal>
-            <Dependent Role="Certificate">
-              <PropertyRef Name="EmpId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_Dept_Member">
-          <End Type="johndoeModel.Dept" Role="Dept" Multiplicity="0..1" />
-          <End Type="johndoeModel.Emp" Role="Emp" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Dept">
-              <PropertyRef Name="Id" />
-            </Principal>
-            <Dependent Role="Emp">
-              <PropertyRef Name="DeptId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -343,64 +159,6 @@
                 <ScalarProperty Name="userName" ColumnName="userName" />
                 <ScalarProperty Name="password" ColumnName="password" />
                 <ScalarProperty Name="userId" ColumnName="userId" />
-                <ScalarProperty Name="id" ColumnName="id" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="Certificates">
-            <EntityTypeMapping TypeName="johndoeModel.Certificate">
-              <MappingFragment StoreEntitySet="Certificate">
-                <ScalarProperty Name="CertificateName" ColumnName="CertificateName" />
-                <ScalarProperty Name="EmpId" ColumnName="EmpId" />
-                <ScalarProperty Name="Id" ColumnName="Id" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="Depts">
-            <EntityTypeMapping TypeName="johndoeModel.Dept">
-              <MappingFragment StoreEntitySet="Dept">
-                <ScalarProperty Name="LocId" ColumnName="LocId" />
-                <ScalarProperty Name="DeptName" ColumnName="DeptName" />
-                <ScalarProperty Name="Id" ColumnName="Id" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="Emps">
-            <EntityTypeMapping TypeName="johndoeModel.Emp">
-              <MappingFragment StoreEntitySet="Emp">
-                <ScalarProperty Name="DeptId" ColumnName="DeptId" />
-                <ScalarProperty Name="ManagerId" ColumnName="ManagerId" />
-                <ScalarProperty Name="Bonus" ColumnName="Bonus" />
-                <ScalarProperty Name="Salary" ColumnName="Salary" />
-                <ScalarProperty Name="HireDate" ColumnName="HireDate" />
-                <ScalarProperty Name="Title" ColumnName="Title" />
-                <ScalarProperty Name="Name" ColumnName="Name" />
-                <ScalarProperty Name="Password" ColumnName="Password" />
-                <ScalarProperty Name="EmpNo" ColumnName="EmpNo" />
-                <ScalarProperty Name="Id" ColumnName="Id" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="iots">
-            <EntityTypeMapping TypeName="johndoeModel.iot">
-              <MappingFragment StoreEntitySet="iot">
-                <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
-                <ScalarProperty Name="power" ColumnName="power" />
-                <ScalarProperty Name="Humidity" ColumnName="Humidity" />
-                <ScalarProperty Name="Temperature" ColumnName="Temperature" />
-                <ScalarProperty Name="DeviceId" ColumnName="DeviceId" />
-                <ScalarProperty Name="id" ColumnName="id" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="iot_log">
-            <EntityTypeMapping TypeName="johndoeModel.iot_log">
-              <MappingFragment StoreEntitySet="iot_log">
-                <ScalarProperty Name="logDate" ColumnName="logDate" />
-                <ScalarProperty Name="power" ColumnName="power" />
-                <ScalarProperty Name="Humidity" ColumnName="Humidity" />
-                <ScalarProperty Name="Temperature" ColumnName="Temperature" />
-                <ScalarProperty Name="DeviceId" ColumnName="DeviceId" />
                 <ScalarProperty Name="id" ColumnName="id" />
               </MappingFragment>
             </EntityTypeMapping>
