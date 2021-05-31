@@ -43,12 +43,7 @@ namespace johndoeAcution
             this.btnLogin = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txtLogin = new System.Windows.Forms.TextBox();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.gruopBox1.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -186,59 +181,20 @@ namespace johndoeAcution
             this.txtLogin.Size = new System.Drawing.Size(166, 25);
             this.txtLogin.TabIndex = 6;
             // 
-            // Column1
+            // comboBox1
             // 
-            this.Column1.DataPropertyName = "id";
-            this.Column1.HeaderText = "ID";
-            this.Column1.MinimumWidth = 6;
-            this.Column1.Name = "Column1";
-            this.Column1.Width = 125;
-            // 
-            // Column2
-            // 
-            this.Column2.DataPropertyName = "name";
-            this.Column2.HeaderText = "이름";
-            this.Column2.MinimumWidth = 6;
-            this.Column2.Name = "Column2";
-            this.Column2.Width = 125;
-            // 
-            // Column3
-            // 
-            this.Column3.DataPropertyName = "brand";
-            this.Column3.HeaderText = "제조사";
-            this.Column3.MinimumWidth = 6;
-            this.Column3.Name = "Column3";
-            this.Column3.Width = 125;
-            // 
-            // Column4
-            // 
-            this.Column4.DataPropertyName = "price";
-            this.Column4.HeaderText = "가격";
-            this.Column4.MinimumWidth = 6;
-            this.Column4.Name = "Column4";
-            this.Column4.Width = 125;
-            // 
-            // Column5
-            // 
-            this.Column5.DataPropertyName = "smallId";
-            this.Column5.HeaderText = "소분류코드";
-            this.Column5.MinimumWidth = 6;
-            this.Column5.Name = "Column5";
-            this.Column5.Width = 125;
-            // 
-            // Column6
-            // 
-            this.Column6.DataPropertyName = "Buy";
-            this.Column6.HeaderText = "구매 여부";
-            this.Column6.MinimumWidth = 6;
-            this.Column6.Name = "Column6";
-            this.Column6.Width = 125;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(715, 67);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 23);
+            this.comboBox1.TabIndex = 7;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(870, 480);
+            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.gruopBox1);
             this.Controls.Add(this.dataGridView1);
@@ -270,6 +226,7 @@ namespace johndoeAcution
         private System.Windows.Forms.Button btnLogin;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TextBox txtLogin;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }
 
