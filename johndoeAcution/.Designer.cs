@@ -91,7 +91,6 @@ namespace johndoeAcution
             this.txtPwd.Size = new System.Drawing.Size(166, 25);
             this.txtPwd.TabIndex = 7;
             this.txtPwd.TextChanged += new System.EventHandler(this.txtPwd_TextChanged);
-            this.txtPwd.Enter += new System.EventHandler(this.btnLogin_Click);
             // 
             // txtLogin
             // 
@@ -114,6 +113,7 @@ namespace johndoeAcution
             // 
             // Login
             // 
+            this.AcceptButton = this.btnLogin;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(388, 233);
