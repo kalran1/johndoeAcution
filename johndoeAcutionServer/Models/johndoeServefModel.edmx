@@ -1,0 +1,190 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="johndoeModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012.Azure" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="대분류">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" />
+          <Property Name="bigName" Type="nvarchar" MaxLength="20" Nullable="false" />
+        </EntityType>
+        <EntityType Name="소분류">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" />
+          <Property Name="smallName" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="middleId" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="제품_테이블">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" />
+          <Property Name="name" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="brand" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="price" Type="int" Nullable="false" />
+          <Property Name="smallId" Type="int" Nullable="false" />
+          <Property Name="buy" Type="bit" />
+        </EntityType>
+        <EntityType Name="중분류">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" />
+          <Property Name="middleName" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="bigId" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="회원정보">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="LoginId" Type="int" Nullable="false" />
+          <Property Name="Password" Type="int" Nullable="false" />
+          <Property Name="name" Type="nvarchar" MaxLength="20" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="johndoeModelStoreContainer">
+          <EntitySet Name="대분류" EntityType="Self.대분류" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="소분류" EntityType="Self.소분류" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="제품_테이블" EntityType="Self.제품_테이블" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="중분류" EntityType="Self.중분류" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="회원정보" EntityType="Self.회원정보" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="johndoeModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="대분류">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" />
+          <Property Name="bigName" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+        </EntityType>
+        <EntityType Name="소분류">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" />
+          <Property Name="smallName" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="middleId" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="제품_테이블">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" />
+          <Property Name="name" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="brand" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="price" Type="Int32" Nullable="false" />
+          <Property Name="smallId" Type="Int32" Nullable="false" />
+          <Property Name="buy" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="중분류">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" />
+          <Property Name="middleName" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="bigId" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="회원정보">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="LoginId" Type="Int32" Nullable="false" />
+          <Property Name="Password" Type="Int32" Nullable="false" />
+          <Property Name="name" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="johndoeServerDb" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="대분류" EntityType="Self.대분류" />
+          <EntitySet Name="소분류" EntityType="Self.소분류" />
+          <EntitySet Name="제품_테이블" EntityType="Self.제품_테이블" />
+          <EntitySet Name="중분류" EntityType="Self.중분류" />
+          <EntitySet Name="회원정보" EntityType="Self.회원정보" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="johndoeModelStoreContainer" CdmEntityContainer="johndoeServerDb">
+          <EntitySetMapping Name="대분류">
+            <EntityTypeMapping TypeName="johndoeModel.대분류">
+              <MappingFragment StoreEntitySet="대분류">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="bigName" ColumnName="bigName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="소분류">
+            <EntityTypeMapping TypeName="johndoeModel.소분류">
+              <MappingFragment StoreEntitySet="소분류">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="smallName" ColumnName="smallName" />
+                <ScalarProperty Name="middleId" ColumnName="middleId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="제품_테이블">
+            <EntityTypeMapping TypeName="johndoeModel.제품_테이블">
+              <MappingFragment StoreEntitySet="제품_테이블">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="brand" ColumnName="brand" />
+                <ScalarProperty Name="price" ColumnName="price" />
+                <ScalarProperty Name="smallId" ColumnName="smallId" />
+                <ScalarProperty Name="buy" ColumnName="buy" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="중분류">
+            <EntityTypeMapping TypeName="johndoeModel.중분류">
+              <MappingFragment StoreEntitySet="중분류">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="middleName" ColumnName="middleName" />
+                <ScalarProperty Name="bigId" ColumnName="bigId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="회원정보">
+            <EntityTypeMapping TypeName="johndoeModel.회원정보">
+              <MappingFragment StoreEntitySet="회원정보">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="LoginId" ColumnName="LoginId" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="name" ColumnName="name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="없음" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
