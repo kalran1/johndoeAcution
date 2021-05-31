@@ -24,8 +24,6 @@ namespace johndoeAcution
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
-
         }
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -39,6 +37,49 @@ namespace johndoeAcution
             dataGridView1.DataSource = searchTable.SearchByName();
         }
 
+        private void btnBuy_Click(object sender, EventArgs e)
+        {
+            int index = dataGridView1.CurrentRow.Index;
+            int id = (int)dataGridView1.Rows[index].Cells[0].Value;
 
+            PurchaseItem purchaseItem = new PurchaseItem(id);
+            int q = purchaseItem.purchaseItem();
+            
+            if (q == 2)
+                MessageBox.Show("구매를 취소했습니다.", "Refund Complete", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            else if (q == 1)
+                MessageBox.Show("구매를 완료했습니다.", "Purchase Complete", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            else
+                MessageBox.Show("오류가 발생했습니다","Unknown Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
+
+            refreshGrid(dataGridView1);
+        }
+
+        private void refreshGrid(DataGridView dataGridView1)
+        {
+            List<int> ListOfId = new List<int>();
+            List<List<제품_테이블>> productList = new List<List<제품_테이블>>();
+
+            foreach (DataGridViewRow i in dataGridView1.Rows)
+            {
+                ListOfId.Add((int)i.Cells[0].Value);
+            }
+            //dataGridView1.DataSource = new DataTable();
+
+            using (var db = new johndoeDb())
+            {
+                foreach (int i in ListOfId)
+                {
+                    //productList.Add(db.제품_테이블.Find("").T);
+                }
+                dataGridView1.DataSource = productList;
+            }
+
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

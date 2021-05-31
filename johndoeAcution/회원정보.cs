@@ -14,9 +14,9 @@ namespace johndoeAcution
     
     public partial class 회원정보
     {
-        public int Id { get; set; }
-        public int LoginId { get; set; }
-        public int Password { get; set; }
-        public string name { get; set; }
+        public int id { get; set; }
+        public string userId { get; set; }
+        public string password { get; set; }
+        public string userName { get; set; }
     }
 }

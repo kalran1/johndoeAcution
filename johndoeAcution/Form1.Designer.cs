@@ -59,7 +59,7 @@ namespace johndoeAcution
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 27;
-            this.dataGridView1.Size = new System.Drawing.Size(815, 275);
+            this.dataGridView1.Size = new System.Drawing.Size(846, 275);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -69,7 +69,7 @@ namespace johndoeAcution
             this.Column1.HeaderText = "ID";
             this.Column1.MinimumWidth = 6;
             this.Column1.Name = "Column1";
-            this.Column1.Width = 125;
+            this.Column1.Width = 45;
             // 
             // Column2
             // 
@@ -97,15 +97,15 @@ namespace johndoeAcution
             // 
             // Column5
             // 
-            this.Column5.DataPropertyName = "smallId";
-            this.Column5.HeaderText = "소분류코드";
+            this.Column5.DataPropertyName = "smallName";
+            this.Column5.HeaderText = "소분류";
             this.Column5.MinimumWidth = 6;
             this.Column5.Name = "Column5";
             this.Column5.Width = 125;
             // 
             // Column6
             // 
-            this.Column6.DataPropertyName = "Buy";
+            this.Column6.DataPropertyName = "buy";
             this.Column6.HeaderText = "구매 여부";
             this.Column6.MinimumWidth = 6;
             this.Column6.Name = "Column6";
@@ -113,30 +113,31 @@ namespace johndoeAcution
             // 
             // btnSearch
             // 
-            this.btnSearch.Location = new System.Drawing.Point(325, 23);
+            this.btnSearch.Location = new System.Drawing.Point(363, 23);
             this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(118, 23);
-            this.btnSearch.TabIndex = 1;
+            this.btnSearch.Size = new System.Drawing.Size(118, 32);
+            this.btnSearch.TabIndex = 2;
             this.btnSearch.Text = "검색";
             this.btnSearch.UseVisualStyleBackColor = true;
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // txtItem
             // 
-            this.txtItem.Location = new System.Drawing.Point(104, 24);
+            this.txtItem.Location = new System.Drawing.Point(142, 29);
             this.txtItem.Name = "txtItem";
             this.txtItem.Size = new System.Drawing.Size(215, 25);
-            this.txtItem.TabIndex = 2;
+            this.txtItem.TabIndex = 1;
             this.txtItem.TextChanged += new System.EventHandler(this.txtItem_TextChanged);
             // 
             // btnBuy
             // 
-            this.btnBuy.Location = new System.Drawing.Point(325, 55);
+            this.btnBuy.Location = new System.Drawing.Point(363, 61);
             this.btnBuy.Name = "btnBuy";
-            this.btnBuy.Size = new System.Drawing.Size(118, 23);
+            this.btnBuy.Size = new System.Drawing.Size(118, 31);
             this.btnBuy.TabIndex = 3;
             this.btnBuy.Text = "구매";
             this.btnBuy.UseVisualStyleBackColor = true;
+            this.btnBuy.Click += new System.EventHandler(this.btnBuy_Click);
             // 
             // gruopBox1
             // 
@@ -144,21 +145,24 @@ namespace johndoeAcution
             this.gruopBox1.Controls.Add(this.txtItem);
             this.gruopBox1.Controls.Add(this.btnBuy);
             this.gruopBox1.Controls.Add(this.btnSearch);
-            this.gruopBox1.Location = new System.Drawing.Point(111, 12);
+            this.gruopBox1.Location = new System.Drawing.Point(12, 12);
             this.gruopBox1.Name = "gruopBox1";
-            this.gruopBox1.Size = new System.Drawing.Size(580, 100);
-            this.gruopBox1.TabIndex = 4;
+            this.gruopBox1.Size = new System.Drawing.Size(491, 123);
+            this.gruopBox1.TabIndex = 1;
             this.gruopBox1.TabStop = false;
             this.gruopBox1.Text = "물건 정보 검색 및 구매";
-
             // 
             // comboBox1
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(-23, 26);
+            this.comboBox1.Items.AddRange(new object[] {
+            "PC",
+            "스포츠",
+            "뷰티"});
+            this.comboBox1.Location = new System.Drawing.Point(15, 31);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(121, 23);
-            this.comboBox1.TabIndex = 7;
+            this.comboBox1.TabIndex = 0;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // Form1
             // 
@@ -184,12 +188,12 @@ namespace johndoeAcution
         private System.Windows.Forms.TextBox txtItem;
         private System.Windows.Forms.Button btnBuy;
         private System.Windows.Forms.GroupBox gruopBox1;
+        private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
-        private System.Windows.Forms.ComboBox comboBox1;
     }
 }

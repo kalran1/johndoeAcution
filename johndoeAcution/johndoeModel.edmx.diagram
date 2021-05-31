@@ -9,8 +9,15 @@
         <EntityTypeShape EntityType="johndoeModel.제품_테이블" Width="1.5" PointX="0.875" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="johndoeModel.중분류" Width="1.5" PointX="4.875" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="johndoeModel.대분류" Width="1.5" PointX="7.125" PointY="0.75" />
-        <EntityTypeShape EntityType="johndoeModel.회원정보" Width="1.5" PointX="0.875" PointY="3" />
-      </Diagram>
+        <EntityTypeShape EntityType="johndoeModel.회원정보" Width="1.5" PointX="1.125" PointY="3.625" />
+        <EntityTypeShape EntityType="johndoeModel.Certificate" Width="1.5" PointX="8.25" PointY="4.75" />
+        <EntityTypeShape EntityType="johndoeModel.Dept" Width="1.5" PointX="3.75" PointY="4.75" />
+        <EntityTypeShape EntityType="johndoeModel.Emp" Width="1.5" PointX="6" PointY="4" />
+        <EntityTypeShape EntityType="johndoeModel.iot" Width="1.5" PointX="0.75" PointY="7.75" />
+        <EntityTypeShape EntityType="johndoeModel.iot_log" Width="1.5" PointX="2.75" PointY="7.75" />
+        <AssociationConnector Association="johndoeModel.FK_Emp_Certificate" />
+        <AssociationConnector Association="johndoeModel.FK_Dept_Member" />
+        </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
 </edmx:Edmx>
