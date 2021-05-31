@@ -70,7 +70,7 @@ namespace johndoeAcution
             {
                 foreach (int i in ListOfId)
                 {
-                    productList.Add(db.제품_테이블.Find("").T);
+                    //productList.Add(db.제품_테이블.Find("").T);
                 }
                 dataGridView1.DataSource = productList;
             }
