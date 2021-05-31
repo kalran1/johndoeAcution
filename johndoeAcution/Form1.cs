@@ -45,5 +45,7 @@ namespace johndoeAcution
             dataGridView1.DataSource = searchTable.SearchByName();
 
         }
+
+        
     }
 }
