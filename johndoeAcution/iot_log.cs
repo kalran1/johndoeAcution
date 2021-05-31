@@ -12,11 +12,13 @@ namespace johndoeAcution
     using System;
     using System.Collections.Generic;
     
-    public partial class 회원정보
+    public partial class iot_log
     {
         public int id { get; set; }
-        public string userId { get; set; }
-        public string password { get; set; }
-        public string userName { get; set; }
+        public int DeviceId { get; set; }
+        public int Temperature { get; set; }
+        public int Humidity { get; set; }
+        public bool power { get; set; }
+        public Nullable<System.DateTime> logDate { get; set; }
     }
 }

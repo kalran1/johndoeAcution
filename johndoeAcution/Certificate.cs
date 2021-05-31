@@ -12,11 +12,12 @@ namespace johndoeAcution
     using System;
     using System.Collections.Generic;
     
-    public partial class 회원정보
+    public partial class Certificate
     {
-        public int id { get; set; }
-        public string userId { get; set; }
-        public string password { get; set; }
-        public string userName { get; set; }
+        public int Id { get; set; }
+        public int EmpId { get; set; }
+        public string CertificateName { get; set; }
+    
+        public virtual Emp Emp { get; set; }
     }
 }

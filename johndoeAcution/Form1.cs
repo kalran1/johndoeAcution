@@ -37,6 +37,7 @@ namespace johndoeAcution
         {
             SearchTable searchTable = new SearchTable(txtItem.Text);
             dataGridView1.DataSource = searchTable.SearchByName();
+            
         }
 
 
