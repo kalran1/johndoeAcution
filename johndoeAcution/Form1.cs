@@ -52,29 +52,13 @@ namespace johndoeAcution
             else
                 MessageBox.Show("오류가 발생했습니다","Unknown Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
 
-            refreshGrid(dataGridView1);
+            refreshGrid();
         }
 
-        private void refreshGrid(DataGridView dataGridView1)
+        private void refreshGrid()
         {
-            List<int> ListOfId = new List<int>();
-            List<List<제품_테이블>> productList = new List<List<제품_테이블>>();
-
-            foreach (DataGridViewRow i in dataGridView1.Rows)
-            {
-                ListOfId.Add((int)i.Cells[0].Value);
-            }
-            //dataGridView1.DataSource = new DataTable();
-
-            using (var db = new johndoeDb())
-            {
-                foreach (int i in ListOfId)
-                {
-                    //productList.Add(db.제품_테이블.Find("").T);
-                }
-                dataGridView1.DataSource = productList;
-            }
-
+            SearchTable searchTable = new SearchTable(txtItem.Text);
+            dataGridView1.DataSource = searchTable.SearchByName();
         }
     }
 }

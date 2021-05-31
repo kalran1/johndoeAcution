@@ -58,6 +58,7 @@
     <Compile Include="Certificate.cs">
       <DependentUpon>johndoeModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="customStructure.cs" />
     <Compile Include="Dept.cs">
       <DependentUpon>johndoeModel.tt</DependentUpon>
     </Compile>
