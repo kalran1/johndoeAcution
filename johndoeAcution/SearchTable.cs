@@ -29,10 +29,8 @@ namespace johndoeAcution
         {
             using(johndoeDb db = new johndoeDb())
             {
-                //db.회원정보.SingleOrDefault( p => p.LoginId == )
-                string tmp1 = $"SELECT 제품_테이블.id, name, brand, price, smallName, buy FROM 제품_테이블 JOIN 소분류 ON 소분류.id = smallId where name like N'%{keyword}%'";
-
-                return db.Database.SqlQuery<customStruct>(tmp1).ToList();
+                string qs = $"SELECT 제품_테이블.id, name, brand, price, smallName, buy FROM 제품_테이블 JOIN 소분류 ON 소분류.id = smallId where name like N'%{keyword}%'";
+                return db.Database.SqlQuery<customStruct>(qs).ToList();
             }
         }
     }

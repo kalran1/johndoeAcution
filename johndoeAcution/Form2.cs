@@ -36,8 +36,6 @@ namespace johndoeAcution
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            var db = new johndoeDb();
-            /*
             if (LoginId == "abcd" || Password == "1234")
             {
                 var form = new Form1();
@@ -49,7 +47,6 @@ namespace johndoeAcution
                 MessageBox.Show("Login failed.");
                 Hide();
             }
-            */
         }
     }
 }
