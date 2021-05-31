@@ -30,17 +30,17 @@ namespace johndoeAcution
         private void InitializeComponent()
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.btnSearch = new System.Windows.Forms.Button();
-            this.txtItem = new System.Windows.Forms.TextBox();
-            this.btnBuy = new System.Windows.Forms.Button();
-            this.gruopBox1 = new System.Windows.Forms.GroupBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnSearch = new System.Windows.Forms.Button();
+            this.txtItem = new System.Windows.Forms.TextBox();
+            this.btnBuy = new System.Windows.Forms.Button();
+            this.gruopBox1 = new System.Windows.Forms.GroupBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.gruopBox1.SuspendLayout();
             this.SuspendLayout();
@@ -62,55 +62,6 @@ namespace johndoeAcution
             this.dataGridView1.Size = new System.Drawing.Size(846, 275);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // btnSearch
-            // 
-            this.btnSearch.Location = new System.Drawing.Point(363, 23);
-            this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(118, 32);
-            this.btnSearch.TabIndex = 2;
-            this.btnSearch.Text = "검색";
-            this.btnSearch.UseVisualStyleBackColor = true;
-            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
-            // 
-            // txtItem
-            // 
-            this.txtItem.Location = new System.Drawing.Point(142, 29);
-            this.txtItem.Name = "txtItem";
-            this.txtItem.Size = new System.Drawing.Size(215, 25);
-            this.txtItem.TabIndex = 1;
-            this.txtItem.TextChanged += new System.EventHandler(this.txtItem_TextChanged);
-            // 
-            // btnBuy
-            // 
-            this.btnBuy.Location = new System.Drawing.Point(363, 61);
-            this.btnBuy.Name = "btnBuy";
-            this.btnBuy.Size = new System.Drawing.Size(118, 31);
-            this.btnBuy.TabIndex = 3;
-            this.btnBuy.Text = "구매";
-            this.btnBuy.UseVisualStyleBackColor = true;
-            this.btnBuy.Click += new System.EventHandler(this.btnBuy_Click);
-            // 
-            // gruopBox1
-            // 
-            this.gruopBox1.Controls.Add(this.comboBox1);
-            this.gruopBox1.Controls.Add(this.txtItem);
-            this.gruopBox1.Controls.Add(this.btnBuy);
-            this.gruopBox1.Controls.Add(this.btnSearch);
-            this.gruopBox1.Location = new System.Drawing.Point(12, 12);
-            this.gruopBox1.Name = "gruopBox1";
-            this.gruopBox1.Size = new System.Drawing.Size(491, 123);
-            this.gruopBox1.TabIndex = 1;
-            this.gruopBox1.TabStop = false;
-            this.gruopBox1.Text = "물건 정보 검색 및 구매";
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(15, 31);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 23);
-            this.comboBox1.TabIndex = 0;
             // 
             // Column1
             // 
@@ -159,6 +110,59 @@ namespace johndoeAcution
             this.Column6.MinimumWidth = 6;
             this.Column6.Name = "Column6";
             this.Column6.Width = 125;
+            // 
+            // btnSearch
+            // 
+            this.btnSearch.Location = new System.Drawing.Point(363, 23);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(118, 32);
+            this.btnSearch.TabIndex = 2;
+            this.btnSearch.Text = "검색";
+            this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
+            // 
+            // txtItem
+            // 
+            this.txtItem.Location = new System.Drawing.Point(142, 29);
+            this.txtItem.Name = "txtItem";
+            this.txtItem.Size = new System.Drawing.Size(215, 25);
+            this.txtItem.TabIndex = 1;
+            this.txtItem.TextChanged += new System.EventHandler(this.txtItem_TextChanged);
+            // 
+            // btnBuy
+            // 
+            this.btnBuy.Location = new System.Drawing.Point(363, 61);
+            this.btnBuy.Name = "btnBuy";
+            this.btnBuy.Size = new System.Drawing.Size(118, 31);
+            this.btnBuy.TabIndex = 3;
+            this.btnBuy.Text = "구매";
+            this.btnBuy.UseVisualStyleBackColor = true;
+            this.btnBuy.Click += new System.EventHandler(this.btnBuy_Click);
+            // 
+            // gruopBox1
+            // 
+            this.gruopBox1.Controls.Add(this.comboBox1);
+            this.gruopBox1.Controls.Add(this.txtItem);
+            this.gruopBox1.Controls.Add(this.btnBuy);
+            this.gruopBox1.Controls.Add(this.btnSearch);
+            this.gruopBox1.Location = new System.Drawing.Point(12, 12);
+            this.gruopBox1.Name = "gruopBox1";
+            this.gruopBox1.Size = new System.Drawing.Size(491, 123);
+            this.gruopBox1.TabIndex = 1;
+            this.gruopBox1.TabStop = false;
+            this.gruopBox1.Text = "물건 정보 검색 및 구매";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.Items.AddRange(new object[] {
+            "PC",
+            "스포츠",
+            "뷰티"});
+            this.comboBox1.Location = new System.Drawing.Point(15, 31);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 23);
+            this.comboBox1.TabIndex = 0;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // Form1
             // 
