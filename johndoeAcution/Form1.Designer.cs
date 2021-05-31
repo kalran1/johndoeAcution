@@ -40,12 +40,7 @@ namespace johndoeAcution
             this.txtItem = new System.Windows.Forms.TextBox();
             this.btnBuy = new System.Windows.Forms.Button();
             this.gruopBox1 = new System.Windows.Forms.GroupBox();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.gruopBox1.SuspendLayout();
             this.SuspendLayout();
@@ -64,7 +59,7 @@ namespace johndoeAcution
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 27;
-            this.dataGridView1.Size = new System.Drawing.Size(712, 383);
+            this.dataGridView1.Size = new System.Drawing.Size(728, 383);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -74,7 +69,7 @@ namespace johndoeAcution
             this.Column1.HeaderText = "ID";
             this.Column1.MinimumWidth = 6;
             this.Column1.Name = "Column1";
-            this.Column1.Width = 125;
+            this.Column1.Width = 50;
             // 
             // Column2
             // 
@@ -103,14 +98,14 @@ namespace johndoeAcution
             // Column5
             // 
             this.Column5.DataPropertyName = "smallId";
-            this.Column5.HeaderText = "소분류코드";
+            this.Column5.HeaderText = "소분류";
             this.Column5.MinimumWidth = 6;
             this.Column5.Name = "Column5";
             this.Column5.Width = 125;
             // 
             // Column6
             // 
-            this.Column6.DataPropertyName = "Buy";
+            this.Column6.DataPropertyName = "buy";
             this.Column6.HeaderText = "구매 여부";
             this.Column6.MinimumWidth = 6;
             this.Column6.Name = "Column6";
@@ -118,7 +113,7 @@ namespace johndoeAcution
             // 
             // btnSearch
             // 
-            this.btnSearch.Location = new System.Drawing.Point(227, 29);
+            this.btnSearch.Location = new System.Drawing.Point(345, 29);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(127, 32);
             this.btnSearch.TabIndex = 1;
@@ -128,7 +123,7 @@ namespace johndoeAcution
             // 
             // txtItem
             // 
-            this.txtItem.Location = new System.Drawing.Point(6, 29);
+            this.txtItem.Location = new System.Drawing.Point(124, 29);
             this.txtItem.Name = "txtItem";
             this.txtItem.Size = new System.Drawing.Size(215, 30);
             this.txtItem.TabIndex = 2;
@@ -136,7 +131,7 @@ namespace johndoeAcution
             // 
             // btnBuy
             // 
-            this.btnBuy.Location = new System.Drawing.Point(227, 71);
+            this.btnBuy.Location = new System.Drawing.Point(345, 71);
             this.btnBuy.Name = "btnBuy";
             this.btnBuy.Size = new System.Drawing.Size(127, 35);
             this.btnBuy.TabIndex = 3;
@@ -145,65 +140,31 @@ namespace johndoeAcution
             // 
             // gruopBox1
             // 
+            this.gruopBox1.Controls.Add(this.comboBox1);
             this.gruopBox1.Controls.Add(this.txtItem);
             this.gruopBox1.Controls.Add(this.btnBuy);
             this.gruopBox1.Controls.Add(this.btnSearch);
             this.gruopBox1.Font = new System.Drawing.Font("굴림", 12F);
             this.gruopBox1.Location = new System.Drawing.Point(12, 12);
             this.gruopBox1.Name = "gruopBox1";
-            this.gruopBox1.Size = new System.Drawing.Size(370, 123);
+            this.gruopBox1.Size = new System.Drawing.Size(487, 123);
             this.gruopBox1.TabIndex = 4;
             this.gruopBox1.TabStop = false;
             this.gruopBox1.Text = "물건 정보 검색 및 구매";
             // 
-            // Column1
+            // comboBox1
             // 
-            this.Column1.DataPropertyName = "id";
-            this.Column1.HeaderText = "ID";
-            this.Column1.MinimumWidth = 6;
-            this.Column1.Name = "Column1";
-            this.Column1.Width = 50;
-            // 
-            // Column2
-            // 
-            this.Column2.DataPropertyName = "name";
-            this.Column2.HeaderText = "이름";
-            this.Column2.MinimumWidth = 6;
-            this.Column2.Name = "Column2";
-            // 
-            // Column3
-            // 
-            this.Column3.DataPropertyName = "brand";
-            this.Column3.HeaderText = "제조사";
-            this.Column3.MinimumWidth = 6;
-            this.Column3.Name = "Column3";
-            // 
-            // Column4
-            // 
-            this.Column4.DataPropertyName = "price";
-            this.Column4.HeaderText = "가격";
-            this.Column4.MinimumWidth = 6;
-            this.Column4.Name = "Column4";
-            // 
-            // Column5
-            // 
-            this.Column5.DataPropertyName = "smallId";
-            this.Column5.HeaderText = "소분류";
-            this.Column5.MinimumWidth = 6;
-            this.Column5.Name = "Column5";
-            // 
-            // Column6
-            // 
-            this.Column6.DataPropertyName = "buy";
-            this.Column6.HeaderText = "구매 여부";
-            this.Column6.MinimumWidth = 6;
-            this.Column6.Name = "Column6";
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(0, 29);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 28);
+            this.comboBox1.TabIndex = 4;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(736, 532);
+            this.ClientSize = new System.Drawing.Size(752, 532);
             this.Controls.Add(this.gruopBox1);
             this.Controls.Add(this.dataGridView1);
             this.Name = "Form1";
@@ -229,6 +190,7 @@ namespace johndoeAcution
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }
 

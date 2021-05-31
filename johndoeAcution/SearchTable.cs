@@ -18,7 +18,11 @@ namespace johndoeAcution
 
         public List<제품_테이블> SearchByName()
         {
-            return db.제품_테이블.Where(p => p.name.Contains(keyword)).ToList();
+            using(johndoeDb db = new johndoeDb())
+            {
+                string qs = "SELECT name, brand, price, smallName, buy FROM 제품_테이블, 소분류 WHERE smallId = 소분류.id";
+                return db.제품_테이블.SqlQuery(qs).ToList();
+            }
         }
     }
 }

@@ -27,23 +27,16 @@ namespace johndoeAcution
             
             
         }
-
-        private void RefreshGrid()
-        {
-            johndoeDb db = new johndoeDb();
-            dataGridView1.DataSource = db.제품_테이블.ToList();
-        }
-
         private void Form1_Load(object sender, EventArgs e)
         {
-           RefreshGrid();
+            // get all coulmns in db when app started
+            //johndoeDb db = new johndoeDb();
+            //dataGridView1.DataSource = db.제품_테이블.ToList();
         }
-
         private void btnSearch_Click(object sender, EventArgs e)
         {
             SearchTable searchTable = new SearchTable(txtItem.Text);
             dataGridView1.DataSource = searchTable.SearchByName();
-
         }
     }
 }
